@@ -1,0 +1,7 @@
+CREATE DATABASE phpdb;
+CREATE TABLE user (
+   id INT PRIMARY KEY AUTO_INCREMENT,
+   name varchar(20) DEFAULT NULL,
+   password varchar(20) DEFAULT NULL,
+   email varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

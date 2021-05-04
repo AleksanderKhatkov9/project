@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Php web</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <form action="test.php" method="POST">
+            <table class="table">
+
+                <h3 style="color: Blue">Сreate PHP</h3>
+                <br>
+                <tr>
+                    <td class="text-primary">Name</td>
+                    <td><input type="text" id="name" name="name" value="name" size="30"/></td>
+                </tr>
+                <tr>
+                    <td class="text-primary">Password</td>
+                    <td><input type="password" id="password" name="password" value="password" size="30"/>
+                </tr>
+
+                <tr>
+                    <td class="text-primary">Email</td>
+                    <td><input type="email" id="email" name="email" value="email" size="30"/>
+                </tr>
+                </tr>
+            </table>
+            <button type="submit" class="btn btn-success">submit</button>
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="cancel" class="btn btn-danger">cancel</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
