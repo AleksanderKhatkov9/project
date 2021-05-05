@@ -5,3 +5,9 @@ $email = $_POST["email"];
 echo "Ваше имя: <b>".$name."<br></b>".
      "Ваш пароль:<b> ". $password."<br></b>".
      "Ваш email: <b> ". $email."<br></b>";
+
+$connection = new Connection();
+$connection.OpenCon();
+echo $connection;
+
+?>
