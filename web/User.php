@@ -19,13 +19,13 @@ class User
      * @param $password
      * @param $email
      */
-    public function __construct($id, $name, $password, $email)
-    {
-        $this->id = $id;
-        $this->name = $name;
-        $this->password = $password;
-        $this->email = $email;
-    }
+//    public function __construct($id, $name, $password, $email)
+//    {
+//        $this->id = $id;
+//        $this->name = $name;
+//        $this->password = $password;
+//        $this->email = $email;
+//    }
 
     /**
      * @return mixed
