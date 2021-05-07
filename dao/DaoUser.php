@@ -52,7 +52,7 @@ class DaoUser
         $database = 'phpdb'; // имя базы данных
 
         $link = mysqli_connect($host, $user, $password, $database);
-        $sql = "INSERT INTO phpdb.user (id, name, password, email) Values ('$varId','$varName','$varPassword',' $varEmail')";
+        $sql = "INSERT INTO phpdb.user (name, password, email) Values ('$varName','$varPassword',' $varEmail')";
 
 //        $stmt->execute([$varId,  $varName,  $varPassword,$varEmail]);
 //        $pdo->prepare($sql)->execute([$varId,  $varName,  $varPassword,$varEmail]);
@@ -67,21 +67,14 @@ class DaoUser
 
     public function getAll()
     {
-
         $this->OpenCon();
-
-//        $var1 = $binUser->getName();
-//        echo "NAME !!!".$var1;
-
         $host = 'localhost'; // адрес сервера
         $user = "root"; // имя пользователя
         $password = '[]1234#msql*[]/%?&&&?'; // пароль
         $database = 'phpdb'; // имя базы данных
 
         $link = mysqli_connect($host, $user, $password, $database);
-
         $sql = "SELECT * FROM phpdb.user";
-
         $result = mysqli_query($link, $sql);
 
         while ($row = mysqli_fetch_row($result)) {

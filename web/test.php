@@ -1,8 +1,10 @@
 <?php
 
-include 'DaoUser.php';
-include 'User.php';
-$id = 1;
+include 'C:\xampp\htdocs\dashboard\php-web\dao\DaoUser.php';
+//include 'entity/User.php';
+include_once 'C:\xampp\htdocs\dashboard\php-web\entity\User.php';
+
+$id = null;
 $name = $_POST["name"];
 $password = $_POST["password"];
 $email = $_POST["email"];
