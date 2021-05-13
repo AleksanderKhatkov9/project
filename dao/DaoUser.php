@@ -5,16 +5,11 @@ class DaoUser
 
     function OpenCon()
     {
-        // TODO: Implement OpenCon() method.
         $host = 'localhost'; // адрес сервера
         $user = "root"; // имя пользователя
         $password = '[]1234#msql*[]/%?&&&?'; // пароль
         $database = 'phpdb'; // имя базы данных
 
-//        echo 'Host= ' . $hostAll . '<br>';
-//        echo 'User= ' . $userAll . '<br>';
-//        echo 'Password= ' . $passwordAll . '<br>';
-//        echo 'Data= ' . $databaseAll . '<br>';
         $conn = mysqli_connect($host, $user, $password, $database);
         if (!$conn) {
             die("Connection failed: " . mysqli_connect_error());
@@ -68,18 +63,16 @@ class DaoUser
         $link = mysqli_connect($host, $user, $password, $database);
         $sql = "SELECT * FROM phpdb.user";
         $result = mysqli_query($link, $sql);
-
+        $list= array();
 
         while ($row = mysqli_fetch_row($result)) {
-        echo "<br>";
-            echo("ID:<b>".$row[0]."<br></b>".
-                "Name:<b>".$row[1]."<br></b>".
-                "Password:<b>".$row[2]."<br></b>".
-                "Email:<b>".$row[3]."<br></b>");
-        }
-
-        return $row;
-
+//            echo "<tr>";
+//            for ($j = 0 ; $j < 4 ; ++$j) echo "<td>$row[$j]</td>";
+//            echo "</tr>";
+            $list = $result;
+            }
+//            var_dump($list);
+        return $list;
     }
 
 
@@ -95,8 +88,11 @@ public function delete()
         $link = mysqli_connect($host, $user, $password, $database);
         $sql = "DELETE FROM phpdb.user WHERE id= $id;";
         $result = mysqli_query($link, $sql);
+
+
         if ($result =="") {
             echo("<br>Data Delete OK <br>");
+//            header("location :form.html");
         } else {
             echo("<br>Data Delete Failed <br>");
         }
@@ -113,6 +109,7 @@ public function delete()
         $result = mysqli_query($link, $sql);
             if ($result !="") {
                 echo("<br>Data Update OK <br>");
+//                header("location :form.html");
             } else {
                 echo("<br>Data Update Failed <br>");
             }

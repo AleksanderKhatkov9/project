@@ -1,6 +1,4 @@
 
-<!DOCTYPE html>
-<!--<?php 'C:\xampp\htdocs\dashboard\php-web\dao\DaoUser.php'; ?>-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,8 +7,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="/home/sasha/IdeaProjects/Web-tomcat/src/main/webapp/jsp/style/css/fon.css" rel="stylesheet">
 </head>
+
 <body>
+<?php
+include 'C:\xampp\htdocs\dashboard\php-web\dao\DaoUser.php';
+?>
+
 <div class="container">
+
+    <?php
+    $var = new DaoUser();
+    $param = $var->getAll();
+    //    var_dump($param);
+    ?>
+
     <div class="jumbotron">
         <a href="menu.html"><img
                 src="https://img2.freepng.ru/20180429/zte/kisspng-computer-icons-avatar-user-laptop-5ae67d2c9fba76.3873242315250547646543.jpg"
@@ -21,7 +31,6 @@
             src="http://s1.iconbird.com/ico/2013/8/429/w128h1281377937728185024computerimac3.png"
             width="50" height="50" alt="Пример"></a>
 
-        <form action="UserAdd.php" method="Get">
             <table class="table">
                 <h2 class="align-content-center">List Users</h2>
                 <tr>
@@ -31,37 +40,26 @@
                     <th>Email</th>
                     <th>Actions</th>
                 </tr>
-                <tbody>
-
-                <?php
-				$teams = getAll();
-			        echo "Web project";
-			    ?>
 
 
-                <?php foreach($teams as $value) { ?>
-                <tr>
-                    <td><?php echo $value['id'] ?></td>
-                    <td><?php echo $value['name'] ?></td>
-                    <td><?php echo $value['password'] ?></td>
-                    <td><?php echo $value['email'] ?></td>
+                <?php foreach ($param as $value) { ?>
+                    <tr>
+                        <td><?php echo $value['id'] ?></td>
+                        <td><?php echo $value['name'] ?></td>
+                        <td><?php echo $value['password'] ?></td>
+                        <td><?php echo $value['email'] ?></td>
 
-                    <td>
-                        <a href="?id=<?php echo $value->id; ?>"></a><a href="Edit.html">Edit</a>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="delete?id=<c:out value='${book.id}' />">Delete</a>
+                        <td>
+                            <a href="?id=<?php echo $value->id; ?>"></a><a href="Edit.html">Edit</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="delete?id=<c:out value='${book.id}' />">Delete</a>
 
-                    </td>
-                </tr>
+                        </td>
+                    </tr>
                 <?php } ?>
-                </tbody>
             </table>
-            <button type="submit" class="btn btn-success" name="delete">submit</button>
-        </form>
     </div>
 </div>
-
-
 
 </body>
 </html>

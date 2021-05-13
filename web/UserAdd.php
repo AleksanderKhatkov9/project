@@ -11,11 +11,10 @@ $email = $_POST["email"];
 
 $connection = new DaoUser();
 
-if (isset($_POST['add'])) {
+if (isset($_POST['add'])) {  //1
     echo "Ваше имя: <b>" . $name . "<br></b>" .
         "Ваш пароль:<b> " . $password . "<br></b>" .
         "Ваш email: <b> " . $email . "<br></b>";
-
     echo '<br>';
     $bin = new User();
     $bin->setId($id);
@@ -34,29 +33,27 @@ if (isset($_POST['add'])) {
     $connection->save($bin);
 
     echo "Yes :ADD <br>";
+//    header("location: http://localhost/dashboard/php-web/web/index.php", true, 500);
+    $new_url = 'http://localhost/dashboard/php-web/web/index.php';
+    header('Location: '.$new_url);
     echo "<br>";
 } else {
-    $connection->getAll();
     echo "No: ADD <br>";
 }
 
-if (isset($_POST['edit'])) {
+if (isset($_POST['edit'])) { //2
 //    $connection->update();
     echo "Yes: Edit <br>";
 } else {
     echo "No: Edit <br>";
 }
 
-if (isset($_GET['delete'])) {
+if (isset($_GET['delete'])) { //3
     $connection->delete();
     echo "Yes: Delete <br>";
 } else {
     echo "No: Delete <br>";
 }
-
-
-
-
 
 
 //$connection->save($bin);
