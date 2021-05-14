@@ -1,42 +1,53 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Php web</title>
+    <title>Title</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/ libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-<!--    <link href="C:\xampp\htdocs\dashboard\php-web\resources\boostrap\bootstrap-4.5.3\css\bootstrap.min.css" rel="stylesheet">-->
-<!--    <script src="C:\xampp\htdocs\dashboard\php-web\resources\boostrap\bootstrap-4.5.3\js\bootstrap.min.js"></script>-->
-
-
 </head>
 <body>
+
+<?php
+//include 'index.php';
+?>
+
+<?php
+$id = $_GET['edit'];
+//echo "RESULT= ".$id;
+?>
+
 <div class="container">
     <div class="jumbotron">
+
+        <a href="menu.html"><img src="https://img2.freepng.ru/20180429/zte/kisspng-computer-icons-avatar-user-laptop-5ae67d2c9fba76.3873242315250547646543.jpg"
+                                 width="50" height="50" alt="Пример"></a>
+        <br><br><br>
         <form action="UserAdd.php" method="POST">
             <table class="table">
+                <h3 class="text-info">Edit user
+                    <tr>
+                        <td class="text-primary">ID</td>
+                        <td><input type="text" id="name" name="id" value="<?php echo $id ?>" size="0"/></td>
+                    </tr>
 
-                <h3 style="color: Blue">Сreate PHP</h3>
-                <br>
                 <tr>
                     <td class="text-primary">Name</td>
                     <td><input type="text" id="name" name="name" value="name" size="30"/></td>
                 </tr>
                 <tr>
                     <td class="text-primary">Password</td>
-                    <td><input type="password" id="password" name="password" value="*****" size="30"/>
+                    <td><input type="password" id="password" name="password" value="password" size="30"/>
                 </tr>
-
                 <tr>
                     <td class="text-primary">Email</td>
                     <td><input type="email" id="email" name="email" value="email" size="30"/>
                 </tr>
-                </tr>
+
             </table>
-            <button type="submit" class="btn btn-success" name="add">submit</button>
-            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="submit" class="btn btn-success" name="edit">submit</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;
             <button type="cancel" class="btn btn-danger">cancel</button>
         </form>
     </div>

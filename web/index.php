@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <title>Menu</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href="/home/sasha/IdeaProjects/Web-tomcat/src/main/webapp/jsp/style/css/fon.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/ libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -21,12 +20,12 @@ include 'C:\xampp\htdocs\dashboard\php-web\dao\DaoUser.php';
     //    var_dump($param);
     ?>
 
+
     <div class="jumbotron">
         <a href="menu.html"><img
                 src="https://img2.freepng.ru/20180429/zte/kisspng-computer-icons-avatar-user-laptop-5ae67d2c9fba76.3873242315250547646543.jpg"
                 width="50" height="50" alt="Пример"></a>
         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-
         <a href="add.html"/><img
             src="http://s1.iconbird.com/ico/2013/8/429/w128h1281377937728185024computerimac3.png"
             width="50" height="50" alt="Пример"></a>
@@ -50,9 +49,13 @@ include 'C:\xampp\htdocs\dashboard\php-web\dao\DaoUser.php';
                         <td><?php echo $value['email'] ?></td>
 
                         <td>
-                            <a href="?id=<?php echo $value->id; ?>"></a><a href="Edit.html">Edit</a>
+<!--                            <a href="UserAdd.php?edit=--><?php //echo $value['id']; ?><!--">Edit</a>-->
+                            <a href="edit.php?edit=<?php echo $value['id']; ?>">Edit</a>
+
+
+<!--                            </a><a href="edit.php">Edit</a>-->
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="delete?id=<c:out value='${book.id}' />">Delete</a>
+                            <a href="UserAdd.php?delete=<?php echo $value['id']; ?>">Delete</a>
 
                         </td>
                     </tr>

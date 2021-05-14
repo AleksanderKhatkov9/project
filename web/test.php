@@ -5,7 +5,6 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href="/home/sasha/IdeaProjects/Web-tomcat/src/main/webapp/jsp/style/css/fon.css" rel="stylesheet">
 </head>
 <body>
 <?php

@@ -75,12 +75,11 @@ class DaoUser
         return $list;
     }
 
-
-public function delete()
+public function delete($id_del)
     {
+        $id = $id_del;
+        echo "DELETE".$id_del;
         $this->OpenCon();
-        $id = 1;
-//        $varId = $bin->setId();
         $host = 'localhost'; // адрес сервера
         $user = "root"; // имя пользователя
         $password = '[]1234#msql*[]/%?&&&?'; // пароль
@@ -89,27 +88,29 @@ public function delete()
         $sql = "DELETE FROM phpdb.user WHERE id= $id;";
         $result = mysqli_query($link, $sql);
 
-
         if ($result =="") {
             echo("<br>Data Delete OK <br>");
-//            header("location :form.html");
         } else {
             echo("<br>Data Delete Failed <br>");
         }
     }
 
-        public function update(){
+        public function update($id_edit, $name_edit, $password_edit, $email_edit){
+        $id = $id_edit;
+        $name = $name_edit;
+        $pass = $password_edit;
+        $email = $email_edit;
+
         $this->OpenCon();
         $host = 'localhost'; // адрес сервера
         $user = "root"; // имя пользователя
         $password = '[]1234#msql*[]/%?&&&?'; // пароль
         $database = 'phpdb'; // имя базы данных
         $link = mysqli_connect($host, $user, $password, $database);
-        $sql = "UPDATE phpdb.user SET name = 'Dima', password = '999999', email = 'bendar01@tut.by' WHERE id=16";
+        $sql = "UPDATE phpdb.user SET name = '$name', password = '$pass', email = '$email' WHERE id=$id";
         $result = mysqli_query($link, $sql);
             if ($result !="") {
                 echo("<br>Data Update OK <br>");
-//                header("location :form.html");
             } else {
                 echo("<br>Data Update Failed <br>");
             }
