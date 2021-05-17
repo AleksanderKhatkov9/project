@@ -10,13 +10,30 @@
 <body>
 
 <?php
-//include 'index.php';
+include 'C:\xampp\htdocs\dashboard\php-web\dao\DaoUser.php';
 ?>
 
 <?php
 $id = $_GET['edit'];
-//echo "RESULT= ".$id;
+//echo "REs= ".$id;
+$var = new DaoUser();
+$param = $var->getId($id);
+
+//var_dump($var);
+
+//$par_id = new DaoUser();
+//$par_id->up($id);
+
+
+
 ?>
+
+<?php foreach ($param as $value) { ?>
+    <?php $name = $value['name']?>
+    <?php $password = $value['password']?>
+    <?php $email = $value['email']?>
+<?php } ?>
+
 
 <div class="container">
     <div class="jumbotron">
@@ -34,17 +51,16 @@ $id = $_GET['edit'];
 
                 <tr>
                     <td class="text-primary">Name</td>
-                    <td><input type="text" id="name" name="name" value="name" size="30"/></td>
+                    <td><input type="text" id="name" name="name" value="<?php echo $name?>" size="30"/></td>
                 </tr>
                 <tr>
                     <td class="text-primary">Password</td>
-                    <td><input type="password" id="password" name="password" value="password" size="30"/>
+                    <td><input type="password" id="password" name="password" value="<?php echo $password?>" size="30"/>
                 </tr>
                 <tr>
                     <td class="text-primary">Email</td>
-                    <td><input type="email" id="email" name="email" value="email" size="30"/>
+                    <td><input type="email" id="email" name="email" value="<?php echo $email?>" size="30"/>
                 </tr>
-
             </table>
             <button type="submit" class="btn btn-success" name="edit">submit</button>
             &nbsp;&nbsp;&nbsp;&nbsp;

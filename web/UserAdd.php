@@ -42,12 +42,15 @@ if (isset($_POST['add'])) {  //1
 if (isset($_POST['edit'])) { //2
     $id = $_POST['id'];
 
+
     echo "ID : ".$id."<br>";
     echo "Name : ".$name."<br>";
     echo "Password : ".$password."<br>";
     echo "Email : ".$email."<br>";
 
-    $connection->update($id,$name,$password,$email);
+
+
+    $connection->update($id, $name,$password,$email);
     echo "Yes: Edit <br>";
         $new_url = 'http://localhost/dashboard/php-web/web/index.php';
         header('Location: '.$new_url);
@@ -66,11 +69,13 @@ if (isset($_GET['delete'])) { //3
     echo "No: Delete <br>";
 }
 
-
 //$connection->save($bin);
 //$connection->getAll();
 //$connection->delete();
 //$connection->update();
+//$connection ->getId();
+
+
 
 
 

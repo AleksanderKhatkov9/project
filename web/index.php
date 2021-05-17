@@ -49,11 +49,7 @@ include 'C:\xampp\htdocs\dashboard\php-web\dao\DaoUser.php';
                         <td><?php echo $value['email'] ?></td>
 
                         <td>
-<!--                            <a href="UserAdd.php?edit=--><?php //echo $value['id']; ?><!--">Edit</a>-->
                             <a href="edit.php?edit=<?php echo $value['id']; ?>">Edit</a>
-
-
-<!--                            </a><a href="edit.php">Edit</a>-->
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             <a href="UserAdd.php?delete=<?php echo $value['id']; ?>">Delete</a>
 
