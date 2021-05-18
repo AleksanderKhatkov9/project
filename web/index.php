@@ -51,7 +51,7 @@ include 'C:\xampp\htdocs\dashboard\php-web\dao\DaoUser.php';
                         <td>
                             <a href="edit.php?edit=<?php echo $value['id']; ?>">Edit</a>
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="UserAdd.php?delete=<?php echo $value['id']; ?>">Delete</a>
+                            <a href="../controller/UserAdd.php?delete=<?php echo $value['id']; ?>">Delete</a>
 
                         </td>
                     </tr>

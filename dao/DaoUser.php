@@ -1,5 +1,6 @@
 <?php
 
+
 class DaoUser
 {
 
@@ -41,8 +42,6 @@ class DaoUser
         $link = mysqli_connect($host, $user, $password, $database);
         $sql = "INSERT INTO phpdb.user (name, password, email) Values ('$varName','$varPassword',' $varEmail')";
 
-//        $stmt->execute([$varId,  $varName,  $varPassword,$varEmail]);
-//        $pdo->prepare($sql)->execute([$varId,  $varName,  $varPassword,$varEmail]);
         $result = mysqli_query($link, $sql);
 
         if ($result == "") {
@@ -124,7 +123,7 @@ class DaoUser
 
 
 
-    public function update($id_edit, $name_edit, $password_edit, $email_edit)
+    public function update($id_edit,$name_edit, $password_edit, $email_edit)
     {
 
         $id = $id_edit;

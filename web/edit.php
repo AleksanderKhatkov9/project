@@ -41,7 +41,7 @@ $param = $var->getId($id);
         <a href="menu.html"><img src="https://img2.freepng.ru/20180429/zte/kisspng-computer-icons-avatar-user-laptop-5ae67d2c9fba76.3873242315250547646543.jpg"
                                  width="50" height="50" alt="Пример"></a>
         <br><br><br>
-        <form action="UserAdd.php" method="POST">
+        <form action="../controller/UserAdd.php" method="POST">
             <table class="table">
                 <h3 class="text-info">Edit user
                     <tr>

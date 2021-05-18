@@ -1,7 +1,7 @@
 <?php
 
 include 'C:\xampp\htdocs\dashboard\php-web\dao\DaoUser.php';
-include'C:\xampp\htdocs\dashboard\php-web\entity\User.php';
+include 'C:\xampp\htdocs\dashboard\php-web\entity\User.php';
 
 $id = null;
 $name = $_POST["name"];
@@ -42,20 +42,19 @@ if (isset($_POST['add'])) {  //1
 if (isset($_POST['edit'])) { //2
     $id = $_POST['id'];
 
-
     echo "ID : ".$id."<br>";
     echo "Name : ".$name."<br>";
     echo "Password : ".$password."<br>";
     echo "Email : ".$email."<br>";
 
+    $connection->update($id,$name,$password,$email);
 
-
-    $connection->update($id, $name,$password,$email);
     echo "Yes: Edit <br>";
         $new_url = 'http://localhost/dashboard/php-web/web/index.php';
         header('Location: '.$new_url);
 } else {
     echo "No: Edit <br>";
+
 }
 
 if (isset($_GET['delete'])) { //3
@@ -74,6 +73,8 @@ if (isset($_GET['delete'])) { //3
 //$connection->delete();
 //$connection->update();
 //$connection ->getId();
+
+
 
 
 
