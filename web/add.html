@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/ libs/jquery/3.5.1/jquery.min.js"></script>
 
-
 <!--    <link href="C:\xampp\htdocs\dashboard\php-web\resources\boostrap\bootstrap-4.5.3\css\bootstrap.min.css" rel="stylesheet">-->
 <!--    <script src="C:\xampp\htdocs\dashboard\php-web\resources\boostrap\bootstrap-4.5.3\js\bootstrap.min.js"></script>-->
 
@@ -15,10 +14,21 @@
 <div class="container">
     <div class="jumbotron">
         <form action="../controller/UserAdd.php" method="POST">
+
             <table class="table">
+                <a href="menu.html" title="Menu">
+                    <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
+                    </svg></a>
 
                 <h3 style="color: Blue">Сreate PHP</h3>
                 <br>
+
+                <p>
+                    <img src="../resources/image/user.jpg"class="rounded"
+                         alt="Cinque Terre" width="200" height="170">
+
+                </p>
                 <tr>
                     <td class="text-primary">Name</td>
                     <td><input type="text" id="name" name="name" value="name" size="30"/></td>

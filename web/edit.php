@@ -18,14 +18,10 @@ $id = $_GET['edit'];
 //echo "REs= ".$id;
 $var = new DaoUser();
 $param = $var->getId($id);
-
 //var_dump($var);
 
 //$par_id = new DaoUser();
 //$par_id->up($id);
-
-
-
 ?>
 
 <?php foreach ($param as $value) { ?>
@@ -38,8 +34,14 @@ $param = $var->getId($id);
 <div class="container">
     <div class="jumbotron">
 
-        <a href="menu.html"><img src="https://img2.freepng.ru/20180429/zte/kisspng-computer-icons-avatar-user-laptop-5ae67d2c9fba76.3873242315250547646543.jpg"
-                                 width="50" height="50" alt="Пример"></a>
+<!--        <a href="menu.html"><img src="https://img2.freepng.ru/20180429/zte/kisspng-computer-icons-avatar-user-laptop-5ae67d2c9fba76.3873242315250547646543.jpg"-->
+<!--                                 width="50" height="50" alt="Пример"></a>-->
+
+        <a href="menu.html" title="Menu" >
+            <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
+            </svg></a>
+
         <br><br><br>
         <form action="../controller/UserAdd.php" method="POST">
             <table class="table">
