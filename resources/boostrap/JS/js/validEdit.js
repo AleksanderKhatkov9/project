@@ -1,10 +1,7 @@
 $(function () {
     // здесь код функции.
-    const submit = document.getElementById("add");
+    const submit = document.getElementById("edit");
     const update = document.getElementById("del");
-    const form = document.getElementsByTagName("form");
-
-    console.log(form);
 
     submit.addEventListener('click', function (even) {
         even.preventDefault();
@@ -61,23 +58,6 @@ $(function () {
 
     update.addEventListener('click', function (even) {
         window.location.reload();
-    });
-
-
-    form.addEventListener('submit', function (even) {
-        even.preventDefault();
-        console.log("Submit");
-        var form_data = $(this).serialize();
-        $.ajax({
-                type: "POST",
-                url: "../controller/UserAdd.php",
-                data: form_data,
-                sanitize: function () {
-                    alert("Ваше сообщение отправлено!");
-                }
-
-            }
-        )
     });
 
 });

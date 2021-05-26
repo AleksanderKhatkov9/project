@@ -24,6 +24,7 @@ class DaoUser
     {
         $this->OpenCon();
         $varId = $binUser->getId();
+//        $varId = 1;
         $varName = $binUser->getName();
         $varPassword = $binUser->getPassword();
         $varEmail = $binUser->getEmail();
@@ -40,8 +41,9 @@ class DaoUser
         $database = 'phpdb'; // имя базы данных
 
         $link = mysqli_connect($host, $user, $password, $database);
-        $sql = "INSERT INTO phpdb.user (name, password, email) Values ('$varName','$varPassword',' $varEmail')";
+        $sql = "INSERT INTO phpdb.user (name, password, email) Values ('$varName', '$varPassword','$varEmail')";
 
+        echo "SQL" . $sql;
         $result = mysqli_query($link, $sql);
 
         if ($result == "") {
@@ -98,7 +100,6 @@ class DaoUser
     public function getId($getId)
     {
         $id = $getId;
-
         $this->OpenCon();
         $host = 'localhost'; // адрес сервера
         $user = "root"; // имя пользователя
@@ -125,7 +126,6 @@ class DaoUser
 
     public function update($id_edit,$name_edit, $password_edit, $email_edit)
     {
-
         $id = $id_edit;
         $name = $name_edit;
         $pass = $password_edit;

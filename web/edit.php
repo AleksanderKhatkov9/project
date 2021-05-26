@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../resources/boostrap/bootstrap-4.5.3/css/bootstrap.min.css">
     <script src="../resources/boostrap/bootstrap-4.5.3/js/bootstrap.min.js"></script>
     <script src="../resources/boostrap/JS/jQuery/jquery.js"></script>
-    <script src="../resources/boostrap/JS/js/validAdd.js"></script>
+<!--    <script src="../resources/boostrap/JS/js/validEdit.js"></script>-->
 
 
 </head>
@@ -44,10 +44,10 @@ $param = $var->getId($id);
 <!--        <a href="menu.html"><img src="https://img2.freepng.ru/20180429/zte/kisspng-computer-icons-avatar-user-laptop-5ae67d2c9fba76.3873242315250547646543.jpg"-->
 <!--                                 width="50" height="50" alt="Пример"></a>-->
 
-        <a href="menu.html" title="Menu" >
-            <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
-            </svg></a>
+<!--        <a href="menu.html" title="Menu" >-->
+<!--            <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">-->
+<!--                <path fill-rule="evenodd" d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>-->
+<!--            </svg></a>-->
 
         <br><br><br>
         <form action="../controller/UserAdd.php" method="POST">
@@ -71,9 +71,9 @@ $param = $var->getId($id);
                     <td><input type="email" id="email" name="email" value="<?php echo $email?>" size="30"/>
                 </tr>
             </table>
-            <button type="submit" class="btn btn-success" name="edit">submit</button>
+            <button type="submit" class="btn btn-success" name="edit"  id="edit">submit</button>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <button type="cancel" class="btn btn-danger">cancel</button>
+            <button type="click" class="btn btn-danger" name="update" id="del">cancel</button>
         </form>
     </div>
 </div>

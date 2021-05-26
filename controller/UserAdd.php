@@ -8,10 +8,17 @@ $name = $_POST["name"];
 $password = $_POST["password"];
 $email = $_POST["email"];
 
+//       echo "Name".$name."<br>";
+//       echo "Password".$password. "<br>";
+//       echo "Password".$email;
+
+
 
 $connection = new DaoUser();
 if (isset($_POST['add'])) {  //1
+        echo "Yes :ADD <br>";
     echo
+        "Ваша id:<b>".$id."<br></b>".
         "Ваше имя: <b>" . $name . "<br></b>" .
         "Ваш пароль:<b> " . $password . "<br></b>" .
         "Ваш email: <b> " . $email . "<br></b>";
@@ -56,7 +63,6 @@ if (isset($_POST['edit'])) { //2
     echo "No: Edit <br>";
 
 }
-
 if (isset($_GET['delete'])) { //3
     $id = $_GET['delete'];
     echo "ID :".$id."<br>";
