@@ -8,14 +8,14 @@ class DaoUser
     {
         $host = 'localhost'; // адрес сервера
         $user = "root"; // имя пользователя
-        $password = '[]1234#msql*[]/%?&&&?'; // пароль
+        $password = 'win@1234#'; // пароль
         $database = 'phpdb'; // имя базы данных
 
         $conn = mysqli_connect($host, $user, $password, $database);
         if (!$conn) {
             die("Connection failed: " . mysqli_connect_error());
         }
-        echo "Connected successfully <br>";
+//        echo "Connected successfully <br>";
         mysqli_close($conn);
         return $conn;
     }
@@ -37,7 +37,7 @@ class DaoUser
         echo "****************************";
         $host = 'localhost'; // адрес сервера
         $user = "root"; // имя пользователя
-        $password = '[]1234#msql*[]/%?&&&?'; // пароль
+        $password = 'win@1234#'; // пароль
         $database = 'phpdb'; // имя базы данных
 
         $link = mysqli_connect($host, $user, $password, $database);
@@ -58,7 +58,7 @@ class DaoUser
         $this->OpenCon();
         $host = 'localhost'; // адрес сервера
         $user = "root"; // имя пользователя
-        $password = '[]1234#msql*[]/%?&&&?'; // пароль
+        $password = 'win@1234#'; // пароль
         $database = 'phpdb'; // имя базы данных
 
         $link = mysqli_connect($host, $user, $password, $database);
@@ -83,7 +83,7 @@ class DaoUser
         $this->OpenCon();
         $host = 'localhost'; // адрес сервера
         $user = "root"; // имя пользователя
-        $password = '[]1234#msql*[]/%?&&&?'; // пароль
+        $password = 'win@1234#'; // пароль
         $database = 'phpdb'; // имя базы данных
         $link = mysqli_connect($host, $user, $password, $database);
         $sql = "DELETE FROM phpdb.user WHERE id= $id;";
@@ -103,7 +103,7 @@ class DaoUser
         $this->OpenCon();
         $host = 'localhost'; // адрес сервера
         $user = "root"; // имя пользователя
-        $password = '[]1234#msql*[]/%?&&&?'; // пароль
+        $password = 'win@1234#'; // пароль
         $database = 'phpdb'; // имя базы данных
         $link = mysqli_connect($host, $user, $password, $database);
 
@@ -123,8 +123,7 @@ class DaoUser
     }
 
 
-
-    public function update($id_edit,$name_edit, $password_edit, $email_edit)
+    public function update($id_edit, $name_edit, $password_edit, $email_edit)
     {
         $id = $id_edit;
         $name = $name_edit;
@@ -134,7 +133,7 @@ class DaoUser
         $this->OpenCon();
         $host = 'localhost'; // адрес сервера
         $user = "root"; // имя пользователя
-        $password = '[]1234#msql*[]/%?&&&?'; // пароль
+        $password = 'win@1234#'; // пароль
         $database = 'phpdb'; // имя базы данных
         $link = mysqli_connect($host, $user, $password, $database);
         $sql = "UPDATE phpdb.user SET name = '$name', password = '$pass', email = '$email' WHERE id=$id";
@@ -145,4 +144,18 @@ class DaoUser
             echo("<br>Data Update Failed <br>");
         }
     }
+
+//    function get_Param($id, Param $param)
+//    {
+//        $res = $id;
+//        echo "get_Param ".$res."<br>";
+//        $param ->setParaId($res);
+//        return $param;
+////        $id = $_GET['edit'];
+////        $t = $param->getParaId();
+////        echo " GET".$id;
+//
+//    }
+
+
 }

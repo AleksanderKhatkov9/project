@@ -27,9 +27,9 @@ include 'C:\xampp\htdocs\dashboard\php-web\dao\DaoUser.php';
     </div>
 
     <div class="navbar">
-        <a href="add.html">Link1</a>
-        <a href="index.php">Link2</a>
-        <a href="index.html">Link3</a>
+        <a href="add.html" title="Добавить">Добавить</a>
+        <a href="update.php" title="Информация">Вывод информации</a>
+        <a href="index.html" title="Назад">Меню</a>
     </div>
 
 
@@ -40,32 +40,18 @@ include 'C:\xampp\htdocs\dashboard\php-web\dao\DaoUser.php';
     ?>
 
 
-    <div class="main">
-
+    <div class="row">
+        <div class="container">
     <div class="jumbotron">
-<!--        <a href="menu.html"><img-->
-<!--                src="https://img2.freepng.ru/20180429/zte/kisspng-computer-icons-avatar-user-laptop-5ae67d2c9fba76.3873242315250547646543.jpg"-->
-<!--                width="50" height="50" alt="Пример"></a>-->
-        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-<!--        <a href="menu.html" title="Menu">-->
-<!--            <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">-->
-<!--                <path fill-rule="evenodd" d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>-->
-<!--            </svg></a>-->
-
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--        <a href="add.html" title="add">-->
-<!--        <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">-->
-<!--            <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>-->
-<!--        </svg></a>-->
 
             <table class="table">
-                <h2 class="align-content-center">List Users</h2>
+                <h2 class="align-content-center">Информация</h2>
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Password</th>
-                    <th>Email</th>
-                    <th>Actions</th>
+                    <th>Имя</th>
+                    <th>Пароль</th>
+                    <th>Почта</th>
+                    <th>Действия</th>
                 </tr>
 
 
@@ -77,9 +63,9 @@ include 'C:\xampp\htdocs\dashboard\php-web\dao\DaoUser.php';
                         <td><?php echo $value['email'] ?></td>
 
                         <td>
-                            <a href="edit.php?edit=<?php echo $value['id']; ?>">Edit</a>
+                            <a href="edit.php?edit=<?php echo $value['id']; ?>">Редактировать</a>
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="../controller/UserAdd.php?delete=<?php echo $value['id']; ?>">Delete</a>
+                            <a href="../controller/UserAdd.php?delete=<?php echo $value['id']; ?>">Удалить</a>
 
                         </td>
                     </tr>

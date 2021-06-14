@@ -23,28 +23,20 @@
     </div>
 
     <div class="navbar">
-        <a href="add.html">Link1</a>
-        <a href="index.php">Link2</a>
-        <a href="index.html">Link3</a>
+        <a href="add.html" title="Добавить">Добавить</a>
+        <a href="update.php" title="Информация">Вывод информации</a>
+        <a href="index.html" title="Назад">Меню</a>
     </div>
 
 
-    <div class="main">
+    <div class="row">
         <div class="container">
             <div class="jumbotron">
                 <!--        action="../controller/UserAdd.php"-->
                 <form action="../controller/UserAdd.php" method="POST">
                     <table class="table">
-                        <a href="menu.html" title="Menu">
-<!--                            <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-caret-left"-->
-<!--                                 fill="currentColor"-->
-<!--                                 xmlns="http://www.w3.org/2000/svg">-->
-<!--                                <path fill-rule="evenodd"-->
-<!--                                      d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>-->
-<!--                            </svg>-->
-                        </a>
 
-                        <h3 style="color: Blue">Сreate User</h3>
+                        <h3 style="color: Blue">Добавить пользователя</h3>
                         <br>
 
                         <p>
@@ -53,27 +45,29 @@
 
                         </p>
                         <tr>
-                            <td class="text-primary">Name</td>
+                            <td class="text-primary">Имя</td>
                             <td><input type="text" id="name" name="name" value="name" size="30"/></td>
                         </tr>
                         <tr>
-                            <td class="text-primary">Password</td>
+                            <td class="text-primary">Пароль</td>
                             <td><input type="password" id="password" name="password" value="*****" size="30"/>
                         </tr>
 
                         <tr>
-                            <td class="text-primary">Email</td>
+                            <td class="text-primary">Почта</td>
                             <td><input type="email" id="email" name="email" value="email" size="30"/>
                         </tr>
                         </tr>
                     </table>
-                    <button type="submit" class="btn btn-success" name="add"  id="add">submit</button>
+                    <button type="submit" class="btn btn-success" name="add" id="add">Отправить</button>
                     &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                    <button type="click" class="btn btn-danger" name="update" id="del">cancel</button>
+                    <button type="click" class="btn btn-danger" name="update" id="del">Отмена</button>
                 </form>
 
 
             </div>
+
+
         </div>
         <div class="container mt-3">
             <div class="footer">
