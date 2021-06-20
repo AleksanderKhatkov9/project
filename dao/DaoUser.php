@@ -1,11 +1,18 @@
 <?php
 
+global $result_param;
+//$host = 'localhost'; // адрес сервера
+//$user = "root"; // имя пользователя
+//$password = 'win@1234#'; // пароль
+//$database = 'phpdb'; // имя базы данных
+
 
 class DaoUser
 {
 
     function OpenCon()
     {
+        global $host,$user,$password,$database;
         $host = 'localhost'; // адрес сервера
         $user = "root"; // имя пользователя
         $password = 'win@1234#'; // пароль
@@ -55,6 +62,8 @@ class DaoUser
 
     public function getAll()
     {
+        global $result_param;
+
         $this->OpenCon();
         $host = 'localhost'; // адрес сервера
         $user = "root"; // имя пользователя
@@ -78,6 +87,7 @@ class DaoUser
 
     public function delete($id_del)
     {
+
         $id = $id_del;
         echo "DELETE" . $id_del;
         $this->OpenCon();
@@ -99,6 +109,7 @@ class DaoUser
 
     public function getId($getId)
     {
+
         $id = $getId;
         $this->OpenCon();
         $host = 'localhost'; // адрес сервера
@@ -123,8 +134,13 @@ class DaoUser
     }
 
 
+
+
+
     public function update($id_edit, $name_edit, $password_edit, $email_edit)
     {
+//        global $result_param;
+
         $id = $id_edit;
         $name = $name_edit;
         $pass = $password_edit;
@@ -145,17 +161,18 @@ class DaoUser
         }
     }
 
-//    function get_Param($id, Param $param)
-//    {
-//        $res = $id;
-//        echo "get_Param ".$res."<br>";
-//        $param ->setParaId($res);
-//        return $param;
-////        $id = $_GET['edit'];
-////        $t = $param->getParaId();
-////        echo " GET".$id;
-//
-//    }
+
+
+    function get_Param($id)
+    {
+        global $result_param;
+
+        $res = $id;
+        echo "get_Param " . $res . "<br>";
+        $result_param = $res;
+    }
+
+
 
 
 }
