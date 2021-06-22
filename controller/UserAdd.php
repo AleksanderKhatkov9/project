@@ -89,13 +89,3 @@ if (isset($_GET['delete'])) { //3
 //$connection->delete();
 //$connection->update();
 //$connection ->getId();
-
-
-
-
-
-
-
-
-
-

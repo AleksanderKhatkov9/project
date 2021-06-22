@@ -1,21 +1,15 @@
 <?php
 
-global $result_param;
-//$host = 'localhost'; // адрес сервера
-//$user = "root"; // имя пользователя
-//$password = 'win@1234#'; // пароль
-//$database = 'phpdb'; // имя базы данных
-
 
 class DaoUser
 {
 
     function OpenCon()
     {
-        global $host,$user,$password,$database;
+        global $host, $user, $password, $database;
         $host = 'localhost'; // адрес сервера
         $user = "root"; // имя пользователя
-        $password = 'win@1234#'; // пароль
+        $password = '[]1234#msql*[]/%?&&&?'; // пароль
         $database = 'phpdb'; // имя базы данных
 
         $conn = mysqli_connect($host, $user, $password, $database);
@@ -44,7 +38,7 @@ class DaoUser
         echo "****************************";
         $host = 'localhost'; // адрес сервера
         $user = "root"; // имя пользователя
-        $password = 'win@1234#'; // пароль
+        $password = '[]1234#msql*[]/%?&&&?'; // пароль
         $database = 'phpdb'; // имя базы данных
 
         $link = mysqli_connect($host, $user, $password, $database);
@@ -62,12 +56,10 @@ class DaoUser
 
     public function getAll()
     {
-        global $result_param;
-
         $this->OpenCon();
         $host = 'localhost'; // адрес сервера
         $user = "root"; // имя пользователя
-        $password = 'win@1234#'; // пароль
+        $password = '[]1234#msql*[]/%?&&&?'; // пароль
         $database = 'phpdb'; // имя базы данных
 
         $link = mysqli_connect($host, $user, $password, $database);
@@ -87,13 +79,12 @@ class DaoUser
 
     public function delete($id_del)
     {
-
         $id = $id_del;
         echo "DELETE" . $id_del;
         $this->OpenCon();
         $host = 'localhost'; // адрес сервера
         $user = "root"; // имя пользователя
-        $password = 'win@1234#'; // пароль
+        $password = '[]1234#msql*[]/%?&&&?'; // пароль
         $database = 'phpdb'; // имя базы данных
         $link = mysqli_connect($host, $user, $password, $database);
         $sql = "DELETE FROM phpdb.user WHERE id= $id;";
@@ -109,12 +100,11 @@ class DaoUser
 
     public function getId($getId)
     {
-
         $id = $getId;
         $this->OpenCon();
         $host = 'localhost'; // адрес сервера
         $user = "root"; // имя пользователя
-        $password = 'win@1234#'; // пароль
+        $password = '[]1234#msql*[]/%?&&&?'; // пароль
         $database = 'phpdb'; // имя базы данных
         $link = mysqli_connect($host, $user, $password, $database);
 
@@ -134,13 +124,8 @@ class DaoUser
     }
 
 
-
-
-
     public function update($id_edit, $name_edit, $password_edit, $email_edit)
     {
-//        global $result_param;
-
         $id = $id_edit;
         $name = $name_edit;
         $pass = $password_edit;
@@ -149,7 +134,7 @@ class DaoUser
         $this->OpenCon();
         $host = 'localhost'; // адрес сервера
         $user = "root"; // имя пользователя
-        $password = 'win@1234#'; // пароль
+        $password = '[]1234#msql*[]/%?&&&?'; // пароль
         $database = 'phpdb'; // имя базы данных
         $link = mysqli_connect($host, $user, $password, $database);
         $sql = "UPDATE phpdb.user SET name = '$name', password = '$pass', email = '$email' WHERE id=$id";
@@ -162,7 +147,6 @@ class DaoUser
     }
 
 
-
     function get_Param($id)
     {
         global $result_param;
@@ -171,8 +155,5 @@ class DaoUser
         echo "get_Param " . $res . "<br>";
         $result_param = $res;
     }
-
-
-
 
 }
