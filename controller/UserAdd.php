@@ -1,15 +1,19 @@
 <?php
 
-/**@autor Sasha
+/**
+ * @autor Sasha Hatkov
  * этот класс релизован при помощи патерна mvc
  * класс UserAdd.php отвечает за принятие прихоящих запросов от формы
- * @todo
+ * @todo переписать на pdo
  */
 
 
 include 'C:\xampp\htdocs\dashboard\php-web\dao\DaoUser.php';
 include 'C:\xampp\htdocs\dashboard\php-web\entity\User.php';
 include 'C:\xampp\htdocs\dashboard\php-web\entity\Param.php';
+
+//include 'C:\xampp\htdocs\dashboard\php-web\web\graf.php';
+include 'C:\xampp\htdocs\dashboard\php-web\controller\Diagramm.php';
 
 $id = null;
 $name = $_POST["name"];
@@ -46,8 +50,8 @@ if (isset($_POST['add'])) {  //1
     $connection->save($bin);
 
     echo "Yes :ADD <br>";
-    $new_url = 'http://localhost/dashboard/php-web/web/update.php';
-    header('Location: ' . $new_url);
+//    $new_url = 'http://localhost/dashboard/php-web/web/update.php';
+//    header('Location: ' . $new_url);
     echo "<br>";
 } else {
     echo "No: ADD <br>";

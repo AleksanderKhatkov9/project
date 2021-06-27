@@ -1,5 +1,6 @@
 <?php
 
+global $result_param;
 
 class DaoUser
 {
@@ -150,7 +151,6 @@ class DaoUser
     function get_Param($id)
     {
         global $result_param;
-
         $res = $id;
         echo "get_Param " . $res . "<br>";
         $result_param = $res;

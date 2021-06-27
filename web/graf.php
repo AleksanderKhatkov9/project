@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" type="text/css" href="../resources/boostrap/bootstrap-4.5.3/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../resources/boostrap/css/fon.css">
+    <link rel="stylesheet" type="text/css" href="../resources/boostrap/css/mystyle.css">
     <script src="../resources/boostrap/bootstrap-4.5.3/js/bootstrap.min.js"></script>
     <script src="../resources/boostrap/JS/jQuery/jquery.js"></script>
     <script src="../resources/boostrap/JS/charts/Chart.js"></script>
@@ -33,16 +34,33 @@
         <div class="container">
             <div class="jumbotron">
 
+                <form action="../controller/DiagrammController.php" method="POST">
+                    <h2>Валюты</h2>
+                    <br>
+                    <label for="fname">Валюта</label>
+                    <select class="glyphicon glyphicon-circle-arrow-down">
+                        <option value="">EUR</option>
+                        <option value="">DOLLAR</option>
+                        <option value="">RUB</option>
+                    </select><br><br>
+                    <label for="fname">Графики</label>
+                    <select class="glyphicon glyphicon-circle-arrow-down" name="agent_id">
+                        <option value="<?php echo $graf1 = 'bar'; ?>">Bar</option>
+                        <option value="<?php echo $graf2 = 'line'; ?>">Line</option>
+                        <option value="<?php echo $graf3 = 'doughnut'; ?>">Doughnut</option>
+                    </select><br><br>
+                    <label for="fname">Дата от</label>
+                    <input type="date" name="calendar"><br/><br/>
+                    <label for="fname">Дата до</label>
+                    <input type="date" name="calendar"><br/><br/>
+                    <button type="submit" class="btn btn-success" name="submit" id="submit">Отправить</button>
+                    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="click" class="btn btn-danger" name="click" id="click">Отмена</button>
+                </form>
+                <br><br><br>
+
                 <?php
-                include 'C:\xampp\htdocs\dashboard\php-web\controller\Diagram.php';
 
-
-                $mass1 = array('B1', 'B2', 'B3', 'B4', 'B5');
-                $mass2 = array(5, 8784, 7, 8999, 8, 8787, 5, 8767, 10, 6865);
-
-
-                $diagram = new Diagram();
-                $diagram->paramData($mass1, $mass2);
                 ?>
 
                 <div class="text">
